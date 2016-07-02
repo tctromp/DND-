@@ -3,9 +3,10 @@ package org.trompgames.character;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.entity.Entity;
 import org.trompgames.roll.Roll;
 
-public class Character {
+public abstract class GameCharacter {
 
 	private String name;
 	private String healthRoll;
@@ -14,14 +15,19 @@ public class Character {
 	private int movement;
 	private List<MeleeAttack> meleeAttacks = new ArrayList<>();
 	private List<RangedAttack> rangedAttacks = new ArrayList<>();
+	private Entity entity;
 	
-	
-	public Character(String name, String healthRoll, int armorClass, int movement, MeleeAttack meleeAttack1){
+	public GameCharacter(Entity entity, String name, String healthRoll, int armorClass, int movement){
+		this.entity = entity;
 		this.name = name;
 		this.healthRoll = healthRoll;
 		this.armorClass = armorClass;
 		this.movement = movement;
 		calculateHealth();
+	}
+	
+	public Entity getEntity(){
+		return entity;
 	}
 	
 	private void calculateHealth(){

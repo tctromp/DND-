@@ -6,8 +6,8 @@ public class RangedAttack extends Attack{
 	private int reachDisanvantaged;
 	
 	
-	public RangedAttack(String name, int attackModifier, int reachNormal, int reachDisanvantaged, int damage) {
-		super(name, attackModifier, damage);
+	public RangedAttack(String name, int attackModifier, int reachNormal, int reachDisanvantaged, String damageRoll) {
+		super(name, attackModifier, damageRoll);
 		this.reachDisanvantaged = reachDisanvantaged;
 		this.reachNormal = reachNormal;
 		// TODO Auto-generated constructor stub
