@@ -58,5 +58,14 @@ public abstract class GameCharacter {
 		rangedAttacks.add(attack);
 	}
 	
+	public List<MeleeAttack> getMeleeAttacks(){
+		return meleeAttacks;
+	}
+	
+	public List<RangedAttack> getRangedAttacks(){
+		return rangedAttacks;
+	}
+	
+	
 
 }
