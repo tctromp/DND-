@@ -34,8 +34,16 @@ public abstract class GameCharacter {
 		this.health = new Roll(healthRoll).getResult();
 	}
 
+	public void setName(String name){
+		this.name = name;
+	}
+	
 	public String getName(){
 		return name;
+	}
+	
+	public void setHealth(int health){
+		this.health = health;
 	}
 	
 	public int getHealth(){

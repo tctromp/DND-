@@ -21,8 +21,12 @@ public abstract class Attack {
 		return attackModifier;
 	}
 	
-	public int attack(){
-		return new Roll(damageRoll).getResult() + attackModifier;		
+	public int getAttackRoll(){
+		return new Roll("1d20").getResult() + attackModifier;
+	}
+	
+	public int getDamageRoll(){
+		return new Roll(damageRoll).getResult();	
 	}
 	
 	public String getName(){
