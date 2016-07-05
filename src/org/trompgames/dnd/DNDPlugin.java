@@ -5,6 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.trompgames.character.CharacterListener;
 import org.trompgames.ethron97.Lasso;
 import org.trompgames.ethron97.LassoListener;
 
@@ -16,7 +17,8 @@ public class DNDPlugin extends JavaPlugin{
 	public void onEnable(){
 		
 		this.getServer().getPluginManager().registerEvents(new LassoListener(this), this);
-		
+		this.getServer().getPluginManager().registerEvents(new CharacterListener(), this);
+
 		Bukkit.broadcastMessage(ChatColor.GOLD + "DNDPlugin Enabled");
 	}
 	

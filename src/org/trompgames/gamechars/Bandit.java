@@ -1,14 +1,12 @@
 package org.trompgames.gamechars;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.trompgames.character.Attack;
 import org.trompgames.character.GameCharacter;
+import org.trompgames.character.GameCharacterType;
 import org.trompgames.character.MeleeAttack;
 import org.trompgames.character.RangedAttack;
 
@@ -31,7 +29,15 @@ public class Bandit extends GameCharacter{
 	
 	public static void main(String[] args) {
 		
-
+		
+		GameCharacter gc = GameCharacterType.createGameCharacter(null, "Bandit");
+		
+		System.out.println(gc.getName());
+		
+		
+		
+		
+		/*
 		
 		List<GameCharacter> gameCharacters = new ArrayList<>();
 		
@@ -118,7 +124,7 @@ public class Bandit extends GameCharacter{
 		//System.out.println(b1.getName() + " missed: " + b1Misses + " times");
 		//System.out.println(b2.getName() + " missed: " + b2Misses + " times");
 
-		
+		*/
 	}
 	
 	

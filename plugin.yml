@@ -1,0 +1,5 @@
+name: DND
+main: org.trompgames.dnd.DNDPlugin
+version: 1.0
+commands:
+   lasso:

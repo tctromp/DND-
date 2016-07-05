@@ -1,8 +1,8 @@
 package org.trompgames.character;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Type;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.trompgames.gamechars.Bandit;
 import org.trompgames.gamechars.BugBear;
@@ -50,8 +50,7 @@ public enum GameCharacterType {
 			gc = (GameCharacter) gct.type.asSubclass(gct.type).getConstructor(Entity.class).newInstance(e);
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
 				| NoSuchMethodException | SecurityException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			// TODO Auto-generated catch block			e1.printStackTrace();
 		}
 		return gc;
 	}

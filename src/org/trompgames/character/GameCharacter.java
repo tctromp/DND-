@@ -17,6 +17,8 @@ public abstract class GameCharacter {
 	private List<RangedAttack> rangedAttacks = new ArrayList<>();
 	private Entity entity;
 	
+	public static List<GameCharacter> gameCharacters = new ArrayList<>();
+	
 	public GameCharacter(Entity entity, String name, String healthRoll, int armorClass, int movement){
 		this.entity = entity;
 		this.name = name;
@@ -24,6 +26,11 @@ public abstract class GameCharacter {
 		this.armorClass = armorClass;
 		this.movement = movement;
 		calculateHealth();
+		gameCharacters.add(this);
+	}
+	
+	public static List<GameCharacter> getGameCharacters(){
+		return gameCharacters;
 	}
 	
 	public Entity getEntity(){
